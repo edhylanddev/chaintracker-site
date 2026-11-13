@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample report · Chain Tracker</title>
+<meta name="description" content="A complete report produced by the Chain Tracker software from demonstration data.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg width="26" height="26" viewBox="0 0 96 96" aria-hidden="true"><path d="M48 6 L90 48 L48 90 L6 48Z" fill="none" stroke="#e0a526" stroke-width="7"/><path d="M48 28 L68 48 L48 68 L28 48Z" fill="#e0a526"/></svg>CHAIN TRACKER</a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Home</a><a href="learn.html">Learn</a><a href="sample-report.html" aria-current="page">Sample report</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero" style="padding:64px 0 72px">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Sample report</div>
+      <h1>A report built to be checked</h1>
+      <p class="lead">This is a complete report produced by the Chain Tracker software from demonstration data. It shows the structure, tables and evidence log the software generates.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="sample/report.pdf">Download sample PDF</a>
+        <a class="btn btn-ghost" href="sample/report.html">Open in browser</a>
+      </div>
+    </div>
+    <div class="note" style="background:#13202d;border-color:#2a3a4c;color:#c9d3dd"><b style="color:#fff">Demonstration data.</b> Every address, transaction and amount in this sample is synthetic and does not depict a real case or person.</div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The sample case</div>
+      <h2>0.60 BTC stolen. Where did it go?</h2>
+      <p class="lead">The stolen coins were spent together with the suspect’s own funds, then moved on. The trace follows the stolen amount using the FIFO method.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="k">Traced amount</div><div class="v">0.60 BTC</div></div>
+      <div class="stat"><div class="k">Reached an exchange</div><div class="v">0.4999 BTC · 2 hops</div></div>
+      <div class="stat"><div class="k">Entered a mixer</div><div class="v">0.10 BTC</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tint">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What’s inside</div>
+      <h2>Anatomy of a report</h2>
+    </div>
+    <div class="anatomy">
+      <div class="row">
+        <div class="text"><span class="num-badge">1</span><h3>Transaction analysis</h3><p style="margin-top:8px">Each key transaction is broken down into its inputs and outputs. The software flags mixing transactions and identifies the likely change output, listing the reasons for each verdict.</p></div>
+        <figure class="figure"><img src="assets/img/report-tx.jpg" alt="Transaction analysis showing classification, change detection and the inputs and outputs tables" width="1200" height="675" loading="lazy"></figure>
+      </div>
+      <div class="row">
+        <div class="text"><span class="num-badge">2</span><h3>Address clustering</h3><p style="margin-top:8px">Addresses likely controlled by the same person are grouped. Every link names the rule used and the transaction that supports it, so each grouping can be checked independently.</p></div>
+        <figure class="figure"><img src="assets/img/report-cluster.jpg" alt="Address clustering results listing each member address with its supporting transaction" width="1200" height="675" loading="lazy"></figure>
+      </div>
+      <div class="row">
+        <div class="text"><span class="num-badge">3</span><h3>Fund trace</h3><p style="margin-top:8px">The traced amount is followed hop by hop until it reaches an exchange, a mixer or an unspent holding. The totals reconcile: what reached each destination plus fees equals the starting amount.</p></div>
+        <figure class="figure"><img src="assets/img/report-taint.jpg" alt="Fund trace results with destinations and a table of traced outputs" width="1200" height="675" loading="lazy"></figure>
+      </div>
+      <div class="row">
+        <div class="text"><span class="num-badge">4</span><h3>Graph of the trail</h3><p style="margin-top:8px">The whole path on one page: money flows left to right, exchanges are marked in amber, and mixing transactions in red.</p></div>
+        <figure class="figure"><img src="assets/img/report-graph-crop.jpg" alt="Graph of the traced funds from source to destinations" width="1200" height="675" loading="lazy"></figure>
+      </div>
+      <div class="row">
+        <div class="text"><span class="num-badge">5</span><h3>Methodology, limitations and evidence</h3><p style="margin-top:8px">Every report explains how each finding was reached, what the methods can’t prove, where each attribution came from, and lists every blockchain record collected with its SHA-256 fingerprint.</p></div>
+        <figure class="figure"><img src="assets/img/report-evidence.jpg" alt="Evidence log with timestamps and SHA-256 hashes" width="1200" height="527" loading="lazy"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <h2>New to Bitcoin forensics?</h2>
+      <p style="margin-top:10px">The explainers cover the ideas behind every section of this report.</p>
+    </div>
+    <a class="btn btn-primary" href="learn.html">Watch the explainers</a>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;letter-spacing:.14em"><svg width="26" height="26" viewBox="0 0 96 96" aria-hidden="true"><path d="M48 6 L90 48 L48 90 L6 48Z" fill="none" stroke="#e0a526" stroke-width="7"/><path d="M48 28 L68 48 L48 68 L28 48Z" fill="#e0a526"/></svg>CHAIN TRACKER</div>
+      <p class="fine">Chain Tracker is an independent research and education project about Bitcoin forensics. It does not currently offer investigation services. Sample materials use demonstration data and do not depict real cases or people.</p>
+    </div>
+    <div style="text-align:right">
+      <div>Fort Pierce, Florida</div>
+      <div>Questions about the project: <a href="mailto:[EMAIL]">[EMAIL]</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
